@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cunieform - Task</title>
+  <style>
+    /* Add your CSS styles here */
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header Styles */
+    .cunieform-header {
+      background-color: #f8f8f8;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header-text {
+      flex: 1 1 400px;
+    }
+
+    .header-img {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .header-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .header-text p {
+      font-size: 1.2rem;
+      color: #808080;
+    }
+
+    .header-text h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .content-para {
+      font-size: 1.1rem;
+      color: #808080;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+    }
+
+    .buttons button {
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #3A3A3A;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .buttons button.btn-light {
+      background-color: #f8f8f8;
+      color: #3A3A3A;
+    }
+
+    /* Middle Content 1 Styles */
+    .middle-content-1 {
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .brand-history {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .history-img {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .history-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .history-content {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .history-content h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .history-content p {
+      font-size: 1.2rem;
+      color: #808080;
+    }
+
+    .history-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .history-year {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .brand-year {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .brand-year h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .brand-year img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .brand-year p {
+      font-size: 1.2rem;
+      color: #808080;
+      margin: 0;
+    }
+
+    /* Box Subject Styles */
+    .box-subject {
+      background-color: #f8f8f8;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .box-subject h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .box-subject p {
+      font-size: 1.2rem;
+      color: #808080;
+    }
+
+    /* Flavour Styles */
+    .flavour-1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .flavour-img,
+    .flavour-content {
+      flex: 1 1 400px;
+    }
+
+    .flavour-content .content-item {
+      text-align: left;
+    }
+
+    .flavour-content span {
+      font-size: 1.5rem;
+      color: #808080;
+    }
+
+    .flavour-content h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .flavour-content p {
+      font-size: 1.2rem;
+      color: #808080;
+    }
+
+    .ingridents {
+      margin-top: 2rem;
+    }
+
+    .ingridents .item-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .ingridents .ingridents-items {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .ingridents .ingridents-items h3 {
+      font-size: 1.2rem;
+      color: #3A3A3A;
+      margin: 0.5rem 0;
+    }
+
+    .ingridents .ingridents-items p {
+      font-size: 1rem;
+      color: #808080;
+      margin: 0;
+    }
+
+    /* Main Ingredients Styles */
+    .main-ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .item-img,
+    .item-content {
+      flex: 1 1 400px;
+    }
+
+    .item-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .item-content .ingre-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+
+    .item-content .ingre-item img {
+      max-width: 50px;
+      height: auto;
+    }
+
+    .item-content .ingre-item p {
+      font-size: 1.2rem;
+      color: #808080;
+      margin: 0;
+    }
+
+    /* Sub Ingredients Styles */
+    .sub-ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .sub-ingredients .ingre-item {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    /* Choose Flavour Styles */
+    .choose-flavour {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .choose-flavour-img,
+    .choose-flavour-content {
+      flex: 1 1 400px;
+    }
+
+    .choose-flavour-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .choose-flavour-content h1 {
+      font-size: 2rem;
+      color: #3A3A3A;
+      margin: 1rem 0;
+    }
+
+    .choose-flavour-content p {
+      font-size: 1.2rem;
+      color: #808080;
+      font-weight: 600;
+    }
+
+    .choose-flavour-content button.choose-flavour-btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #3A3A3A;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 2rem;
+      height: 80vh;
+    }
+
+    .image-container {
+      width: 200%;
+    }
+
+    .image {
+      width: 100%;
+      height: 30rem;
+      background-size: cover;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-family: Bungee;
+      font-size: 4rem;
+      font-weight: 400;
+      line-height: 70px;
+      letter-spacing: 0em;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .text {
+      font-size: 1.3rem;
+      line-height: 2.2rem;
+      margin: 2rem 0;
+    }
+
+    .link-image {
+      display: block;
+      margin: 0 auto;
+    }
+    .footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.footeritems {
+  border: 0.2rem solid black;
+  background-image: url("./bg2.png");
+  color: white;
+  width: 34.2rem;
+  height: 20rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.para2 {
+  overflow: hidden;
+  font-family: cairo;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.innerdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn2 {
+  width: 10rem;
+  outline: none;
+  background: rgba(243, 194, 66, 1);
+  padding: 0.4rem;
+  font-family: bungee;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600px;
+  margin-top: 1.5rem;
+}
+
+.btn2:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  font-size: 57px;
+  font-family: bungee;
+  margin-bottom: 2rem;
+}
+
+#innerdiv1 {
+  background-image: url("./bg4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#innerdiv2 {
+  background-image: url("./bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .footeritems {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .innerdiv {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="cunieform-header">
+    <div class="header-content">
+      <div class="header-text">
+        <p>Biergut Premium beer</p>
+        <h1>Introducing new Premium flavours</h1>
+        <span class="content-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo modi soluta,
+          iste quam esse delectus fugit magni hic consectetur incidunt expedita nostrum culpa tempore totam
+          repellendus voluptates necessitatibus reiciendis aperiam possimus ullam fuga earum!</span>
+        <div class="buttons">
+          <button class="btn-dark">Host A Party</button>
+          <button class="btn-light">Restock Your Pub</button>
+        </div>
+      </div>
+      <div class="header-img">
+        <img src="Images/hero-beer-bottles-3.png.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="middle-content-1">
+    <div class="brand-history">
+      <div class="history-img">
+        <img src="Images/brand-history.png.png" alt="">
+      </div>
+      <div class="history-content">
+        <h1>Leading beer brewery, Since 1974!</h1>
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Nulla quis
+          lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh.</p>
+        <p>Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
+          ullamcorper sit amet ligula. Proin eget tortor.</p>
+      </div>
+    </div>
+    <div class="history-year">
+      <div class="brand-year">
+        <h1>1974</h1>
+        <img src="Images/span.elementor-divider-separator.png" alt="">
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+      </div>
+      <div class="brand-year">
+        <h1>1985</h1>
+        <img src="Images/span.elementor-divider-separator.png" alt="">
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+      </div>
+      <div class="brand-year">
+        <h1>2005</h1>
+        <img src="Images/span.elementor-divider-separator.png" alt="">
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+      </div>
+      <div class="brand-year">
+        <h1>2021</h1>
+        <img src="Images/span.elementor-divider-separator.png" alt="">
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-subject">
+    <h1>Discover Our new flavours</h1>
+    <p>Curabitur arcu erat, accumsan id imperdiet et, port titor at sem. Donec sollici tudin molestie malesuada.</p>
+  </div>
+
+  <div class="flavour-1">
+    <div class="flavour-img">
+      <img src="Images/beer-light-1.png.png" alt="">
+    </div>
+    <div class="flavour-content">
+      <div class="content-item">
+        <span>Biergut</span>
+        <h1>Premium Light</h1>
+        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.</p>
+        <div class="ingridents">
+          <div class="item-row">
+            <div class="ingridents-items">
+              <h3>Extract</h3>
+              <p>11%</p>
+            </div>
+            <div class="ingridents-items">
+              <h3>Alcohol</h3>
+              <p>4%</p>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="ingridents-items">
+              <h3>Gentain</h3>
+              <p>20IBU</p>
+            </div>
+            <div class="ingridents-items">
+              <h3>Serving Temp</h3>
+              <p>6-9 Degree Celsius</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flavour-1">
+    <div class="flavour-content">
+      <div class="content-item">
+        <span>Biergut</span>
+        <h1 style="color: #3A3A3A;">Premium Light</h1>
+        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.</p>
+        <div class="ingridents">
+          <div class="item-row">
+            <div class="ingridents-items">
+              <h3>Extract</h3>
+              <p>11%</p>
+            </div>
+            <div class="ingridents-items">
+              <h3>Alcohol</h3>
+              <p>4%</p>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="ingridents-items">
+              <h3>Gentain</h3>
+              <p>20IBU</p>
+            </div>
+            <div class="ingridents-items">
+              <h3>Serving Temp</h3>
+              <p>6-9 Degree Celsius</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flavour-img">
+      <img src="Images/beer-dark-1.png.png" alt="">
+    </div>
+  </div>
+
+  <div class="box-subject">
+    <h1>Features & Ingredients</h1>
+    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada.</p>
+  </div>
+
+  <div class="main-ingredients">
+    <div class="item-img">
+      <img src="Images/beer-features-1.png.png" alt="">
+    </div>
+    <div class="item-content">
+      <div class="ingre-item" style="margin-top: 0px;">
+        <img src="Images/Figure  ICON-FINDER-1-5.png.png" alt="">
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Nulla quis
+          lorem ut libero malesuada feugiat. Mauris blandit aliquet elit.</p>
+      </div>
+      <div class="ingre-item">
+        <img src="Images/Figure  ICON-FINDER-1-3.png.png" alt="">
+        <p>Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac
+          diam sit amet quam vehicula elementum sed sit amet dui.</p>
+      </div>
+      <div class="ingre-item">
+        <img src="Images/Figure  iconfinder_Seed_7609583.png.png" alt="">
+        <p>Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero
+          malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-ingredients">
+    <div class="ingre-item sub-ingre">
+      <img src="Images/Figure  ICON-FINDER-1-4.png.png" alt="">
+      <p>Vestibulum ac diam sit amet quam vehicula elementum .</p>
+    </div>
+    <div class="ingre-item sub-ingre">
+      <img src="Images/Figure  ICON-FINDER-1-2.png.png" alt="">
+      <p>Vestibulum ac diam sit amet quam vehicula elementum .</p>
+    </div>
+    <div class="ingre-item sub-ingre">
+      <img src="Images/Figure  ICON-FINDER-1-1.png.png" alt="">
+      <p>Vestibulum ac diam sit amet quam vehicula elementum .</p>
+    </div>
+  </div>
+
+  <div class="choose-flavour">
+    <div class="choose-flavour-img">
+      <img src="Images/choose-flavor.png.png" alt="">
+    </div>
+    <div class="choose-flavour-content">
+      <h1>Choose Your Flavour</h1>
+      <p><b>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</b></p>
+      <p style="color:#4B4F58; font-weight: 600;">Cras ultricies ligula sed magna dictum porta. Nulla porttitor
+        accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum
+        porta. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Nulla quis lorem ut
+        libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+      <button class="choose-flavour-btn">Choose For Yourself</button>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <img class="image" src="./bg1.png" alt="Image">
+    </div>
+    <div class="text-container">
+      <h2>Discover The Brewing Process</h2>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+        <br>luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+      <img class="link-image" src="../link.png" alt="Link">
+    </div>
+  </div>
+  <div class="footer">
+
+    <div class="footeritems">
+      <div class="innerdiv" id="innerdiv2">
+        <h2>Hosting A
+          Party?</h2>
+        <p class="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+          <br />luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </p>
+        <button class="btn2">Get Biergut</button>
+      </div>
+    </div>
+    <div class="footeritems">
+      <div class="innerdiv" id="innerdiv1">
+        <h2>Own a Pub or
+          Bar?</h2>
+        <p class="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,<br>
+          luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </p>
+        <button class="btn2">Contact For Stocking</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
