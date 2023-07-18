@@ -389,90 +389,178 @@
       display: block;
       margin: 0 auto;
     }
+
     .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 10rem;
-}
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 10rem;
+    }
 
-.footeritems {
-  border: 0.2rem solid black;
-  background-image: url("./bg2.png");
-  color: white;
-  width: 34.2rem;
-  height: 20rem;
-  padding: 3rem;
-  margin-bottom: 2rem;
-}
+    .footeritems {
+      border: 0.2rem solid black;
+      background-image: url("./bg2.png");
+      color: white;
+      max-width: 34.2rem;
+      width: 100%;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-.para2 {
-  overflow: hidden;
-  font-family: cairo;
-  text-align: center;
-  margin-top: 2rem;
-}
+    .para2 {
+      overflow: hidden;
+      font-family: cairo;
+      text-align: center;
+      margin-top: 2rem;
+    }
 
-.innerdiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .innerdiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.btn2 {
-  width: 10rem;
-  outline: none;
-  background: rgba(243, 194, 66, 1);
-  padding: 0.4rem;
-  font-family: bungee;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-size: 1.05rem;
-  font-weight: 600px;
-  margin-top: 1.5rem;
-}
+    .btn2 {
+      width: 10rem;
+      outline: none;
+      background: rgba(243, 194, 66, 1);
+      padding: 0.4rem;
+      font-family: bungee;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
 
-.btn2:hover {
-  transform: scale(1.2);
-}
+    .btn2:hover {
+      transform: scale(1.2);
+    }
 
-h2 {
-  font-size: 57px;
-  font-family: bungee;
-  margin-bottom: 2rem;
-}
+    h2 {
+      font-size: 57px;
+      font-family: bungee;
+      margin-bottom: 2rem;
+    }
 
-#innerdiv1 {
-  background-image: url("./bg4.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    #innerdiv1 {
+      background-image: url("./bg4.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-#innerdiv2 {
-  background-image: url("./bg3.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media screen and (max-width: 768px) {
-  .footeritems {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-  }
+    #innerdiv2 {
+      background-image: url("./bg3.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-  .innerdiv {
-    padding: 1.5rem;
-  }
-  
-  h2 {
-    font-size: 36px;
-  }
-}
+    @media screen and (max-width: 768px) {
+      .footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footeritems {
+        max-width: 100%;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+    }
 
 
+    #innerdiv1 {
+      background-image: url("./bg4.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #innerdiv2 {
+      background-image: url("./bg3.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footeritems {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+      .innerdiv {
+        padding: 1.5rem;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2rem;
+        height: 80vh;
+      }
+
+      .inner-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .image {
+        width: 100%;
+        height: 30rem;
+        background-size: cover;
+      }
+
+      .text-container {
+        flex: 1;
+        text-align: center;
+        color: white;
+        font-family: Bungee;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 70px;
+        letter-spacing: 0em;
+      }
+
+      .text-container h2 {
+        font-size: 36px;
+      }
+
+      .text {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        margin: 2rem 0;
+      }
+
+      .link-image {
+        display: block;
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          height: auto;
+          padding: 2rem;
+        }
+      }
+
+    }
   </style>
 </head>
 
@@ -708,5 +796,3 @@ h2 {
 </body>
 
 </html>
-
-<!-- dsljlkjdfdfsdad -->
